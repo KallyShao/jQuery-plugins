@@ -1,0 +1,35 @@
+/*
+* @Author: Administrator
+* @Date:   2018-02-07 10:02:50
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-02-07 13:38:59
+*/
+*{
+	margin: 0;
+	padding: 0;
+}
+.tab, .tab1{
+	width: 200px;
+	height: 300px;
+	border: 1px solid #333;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.tab_nav{
+	width: 100%;
+}
+.tab_nav li{
+	float: left;
+	width: 33.33%;
+	height: 20px;
+	line-height: 20px;
+	list-style: none;
+	text-align: center;
+}
+.tab_nav li.active{
+	background: #333;
+	color: #fff;
+}
+.tab_content div{
+	display: none;
+}

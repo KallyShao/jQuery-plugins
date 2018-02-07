@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js
+"></script>
+    <script>
+        $(function(){
+            $.fn.addStr = function(str) {
+                this.each(function() {
+                    this.innerHTML = str;
+                    console.log(this);
+                })
+                // console.log(this);  //这里this是jq对象，而不是dom元素？？？？？
+                console.log (this);   //true. 
+                return this;    //这里是将jq对象返回，因此在链式操作时可以继续调用该对象上的所有方法；
+            }
+            var obj = $('.test').addStr('aaaaaaaaaaaaa');
+            // console.log(obj);
+        });
+
+    // var obj = $(".test").addStr("add str"); //obj is undefined  
+    // console.log(obj instanceof jQuery); //false
+    </script>
+</head>
+
+<body>
+    <div class="test">div1</div>
+    <div class="test">div2</div>
+    <div class="test1">div2</div>
+</body>
+
+</html>
